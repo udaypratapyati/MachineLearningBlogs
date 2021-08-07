@@ -10,6 +10,3 @@ https://udaypratapyati.github.io/MachineLearningBlogs/
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
-
-
-Note: you may want to remove example blog posts from the `_posts`,  `_notebooks` or `_word` folders (but leave them empty, don't delete these folders) if you don't want these blog posts to appear on your site.
