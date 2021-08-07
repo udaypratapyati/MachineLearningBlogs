@@ -65,8 +65,6 @@ Python code and output:
 print(1+1)
 ```
 
-    2
-
 Formatting text as shell commands:
 
 ```shell
