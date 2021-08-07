@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>INTRO TO MACHINE LEARNING | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="INTRO TO MACHINE LEARNING" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A brief introduction to machine learning" />
+<meta property="og:description" content="A brief introduction to machine learning" />
+<link rel="canonical" href="https://udaypratapyati.github.io/MachineLearningBlogs/machinelearning/ml/datascience/2021/08/06/Introduction-To-MachineLearning.html" />
+<meta property="og:url" content="https://udaypratapyati.github.io/MachineLearningBlogs/machinelearning/ml/datascience/2021/08/06/Introduction-To-MachineLearning.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://udaypratapyati.github.io/MachineLearningBlogs/images/IntroToML/image12.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-08-06T00:00:00-05:00","url":"https://udaypratapyati.github.io/MachineLearningBlogs/machinelearning/ml/datascience/2021/08/06/Introduction-To-MachineLearning.html","@type":"BlogPosting","dateModified":"2021-08-06T00:00:00-05:00","image":"https://udaypratapyati.github.io/MachineLearningBlogs/images/IntroToML/image12.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://udaypratapyati.github.io/MachineLearningBlogs/machinelearning/ml/datascience/2021/08/06/Introduction-To-MachineLearning.html"},"headline":"INTRO TO MACHINE LEARNING","description":"A brief introduction to machine learning","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/MachineLearningBlogs/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://udaypratapyati.github.io/MachineLearningBlogs/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/MachineLearningBlogs/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/MachineLearningBlogs/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/MachineLearningBlogs/about/">About Me</a><a class="page-link" href="/MachineLearningBlogs/search/">Search</a><a class="page-link" href="/MachineLearningBlogs/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">INTRO TO MACHINE LEARNING</h1><p class="page-description">A brief introduction to machine learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-06T00:00:00-05:00" itemprop="datePublished">
+        Aug 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/MachineLearningBlogs/categories/#MachineLearning">MachineLearning</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MachineLearningBlogs/categories/#ML">ML</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/MachineLearningBlogs/categories/#DataScience">DataScience</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/udaypratapyati/MachineLearningBlogs/tree/master/_notebooks/2021-08-06-Introduction-To-MachineLearning.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/MachineLearningBlogs/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/udaypratapyati/MachineLearningBlogs/master?filepath=_notebooks%2F2021-08-06-Introduction-To-MachineLearning.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/MachineLearningBlogs/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/udaypratapyati/MachineLearningBlogs/blob/master/_notebooks/2021-08-06-Introduction-To-MachineLearning.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/MachineLearningBlogs/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-08-06-Introduction-To-MachineLearning.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Science-from-different-perspective">Data Science from different perspective<a class="anchor-link" href="#Data-Science-from-different-perspective"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image0.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Data-Science">What is Data Science<a class="anchor-link" href="#What-is-Data-Science"> </a></h2><p>Data science is an interdisciplinary field about <strong>scientific</strong> <em>methods</em> , <em>processes</em> and <em>systems</em> to extract <strong>Knowledge or insights</strong> from data in various forms, either <strong>structured or unstructured</strong>.
+<img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image1.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Science-Process">Data Science Process<a class="anchor-link" href="#Data-Science-Process"> </a></h2><p>The three components involved in data science are <strong>organising</strong>, <strong>packaging</strong> and <strong>delivering</strong> data.<br />
+The 3 step OPD Data Science Process</p>
+<h3 id="Step-1.-Organise-Data.">Step 1. Organise Data.<a class="anchor-link" href="#Step-1.-Organise-Data."> </a></h3><p>Organising data involves the <strong>physical storage and format of data</strong> and incorporated best practices in data management.</p>
+<h3 id="Step-2.-Package-Data.&#160;">Step 2. Package Data.&#160;<a class="anchor-link" href="#Step-2.-Package-Data.&#160;"> </a></h3><p>Packaging data involves <strong>logically manipulating</strong> and <strong>joining the underlying raw data</strong> into a <em>new representation</em> and package.</p>
+<h3 id="Step-3.-Deliver-Data.">Step 3. Deliver Data.<a class="anchor-link" href="#Step-3.-Deliver-Data."> </a></h3><p>Delivering data involves ensuring that the <strong>message</strong> that the <strong>data</strong> has, is being accessed by those that need to hear it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intro-to-Machine-Learning">Intro to Machine Learning<a class="anchor-link" href="#Intro-to-Machine-Learning"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image00.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Machine-learning-is-the-idea-that-there-are-generic-algorithms-that-can-tell-you-something-interesting-about-a-set-of-data-without-you-having-to-write-any-custom-code-specific-to-the-problem.">Machine learning is the idea that there are generic algorithms that can tell you something interesting about a set of data without you having to write any custom code specific to the problem.<a class="anchor-link" href="#Machine-learning-is-the-idea-that-there-are-generic-algorithms-that-can-tell-you-something-interesting-about-a-set-of-data-without-you-having-to-write-any-custom-code-specific-to-the-problem."> </a></h4><p>Instead of writing code, you feed data to the generic algorithm and it builds its own logic based on the data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image2.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Types-of-Machine-Learning-Systems">Types of Machine Learning Systems<a class="anchor-link" href="#Types-of-Machine-Learning-Systems"> </a></h1><p>There are so many different types of Machine Learning systems that it is useful to classify them in broad categories based on:</p>
+<ul>
+<li>Whether or not they are trained with human supervision (<strong>supervised</strong>, <strong>unsupervised</strong>, <strong>semisupervised</strong>, and <strong>Reinforcement Learning</strong>)</li>
+<li>Whether or not they can learn incrementally on the fly (<strong>online versus batch learning</strong>)</li>
+<li>Whether they work by simply comparing new data points to known data points, or instead detect patterns in the training data and build a predictive model, much like scientists do (<strong>instance-based versus model-based learning</strong>)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Supervised-Learning">Supervised Learning<a class="anchor-link" href="#Supervised-Learning"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image3.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Supervised learning is where you have input variables (x) and an output variable (Y) and you use an algorithm to learn the mapping function from the input to the output. The <strong>goal</strong> is to <em>approximate the mapping function so well that when you have new input data (x) that you can predict the output variables (Y) for that data</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image4.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Supervised-learning-problems-can-be-further-grouped-into-regression-and-classification-problems.">Supervised learning problems can be further grouped into regression and classification problems.<a class="anchor-link" href="#Supervised-learning-problems-can-be-further-grouped-into-regression-and-classification-problems."> </a></h2><h4 id="Classification:">Classification:<a class="anchor-link" href="#Classification:"> </a></h4><p>A <strong>classification problem</strong> is when the output variable is a <strong>category</strong>, such as “red” or “blue” or “disease” and “no disease”.</p>
+<h4 id="Regression:">Regression:<a class="anchor-link" href="#Regression:"> </a></h4><p>A <strong>regression problem</strong> is when the output variable is a <strong>real value</strong>, such as “rupees” or “weight”.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Some-popular-examples-of-supervised-machine-learning-algorithms-are:">Some popular examples of supervised machine learning algorithms are:<a class="anchor-link" href="#Some-popular-examples-of-supervised-machine-learning-algorithms-are:"> </a></h4><ul>
+<li><strong>Linear regression</strong> for <em>regression</em> problems,</li>
+<li><strong>Random forest</strong> for <em>classification</em> and <em>regression</em> problems,</li>
+<li><strong>Support vector machines (SVM)</strong> for <em>classification</em> problems.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Machine Learning an <strong>attribute</strong> is a data type (e.g., “Mileage”), while a <strong>feature</strong> has several meanings depending on the context, but generally means an attribute plus its value (e.g., “Mileage = 15,000”). Many people use the words attribute and feature interchangeably, though.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image5.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unsupervised-Machine-Learning">Unsupervised Machine Learning<a class="anchor-link" href="#Unsupervised-Machine-Learning"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image6.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Unsupervised learning is where you only have <strong>input data (X)</strong> and <strong>no corresponding output variables</strong>.</p>
+<p>The <strong>goal</strong> for unsupervised learning is to <em>model the underlying structure or distribution in the data in order to learn more about the data</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image7.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Unsupervised-learning-problems-can-be-further-grouped-into-clustering-and-association-problems.">Unsupervised learning problems can be further grouped into clustering and association problems.<a class="anchor-link" href="#Unsupervised-learning-problems-can-be-further-grouped-into-clustering-and-association-problems."> </a></h3><h4 id="Clustering:">Clustering:<a class="anchor-link" href="#Clustering:"> </a></h4><p>A <strong>clustering problem</strong> is where you want to discover the <strong>inherent groupings</strong> in the data, such as <em>grouping customers by purchasing behavior</em>.</p>
+<h4 id="Association:">Association:<a class="anchor-link" href="#Association:"> </a></h4><p>An <strong>association rule</strong> learning problem is where you want to discover <strong>rules that describe large portions</strong> of your data, such as <em>people that buy X also tend to buy Y</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Supervised-Vs-Unsupervised">Supervised Vs Unsupervised<a class="anchor-link" href="#Supervised-Vs-Unsupervised"> </a></h2><ul>
+<li><p><strong>Supervised learning</strong></p>
+<ul>
+<li>Trying to predict a specific quantity.</li>
+<li>Have training examples with labels.</li>
+<li>Cam measure accuracy directly</li>
+</ul>
+</li>
+<li><p><strong>Unsupervised learning</strong></p>
+<ul>
+<li>Trying to understand the data</li>
+<li>Looking for structures or unusual patterns</li>
+<li>Not looking for something specific (supervised)</li>
+<li>Does no require labelled data</li>
+<li>Evaluation, usually indirect or qualitative</li>
+</ul>
+</li>
+<li><p><strong>Semi Supervised learning</strong></p>
+<ul>
+<li>Using unsupervised methods to improve supervised algorithms.</li>
+<li>Usually few labelled examples + lot of unlabelled examples</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Semisupervised-learning">Semisupervised learning<a class="anchor-link" href="#Semisupervised-learning"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some algorithms can deal with <strong>partially labeled training data</strong>, usually a <em>lot of unlabeled data and a little bit of labeled data</em>.</p>
+<p>Some <strong>photo-hosting services</strong>, such as <em>Google Photos</em>, are good examples of this.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image8.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Why-Use-Machine-Learning?">Why Use Machine Learning?<a class="anchor-link" href="#Why-Use-Machine-Learning?"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image9.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image10.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image11.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="To-summarize,-Machine-Learning-is-great-for:">To summarize, Machine Learning is great for:<a class="anchor-link" href="#To-summarize,-Machine-Learning-is-great-for:"> </a></h3><ul>
+<li><p>Problems for which <strong>existing solutions require a lot of hand-tuning</strong> or long lists of rules: one Machine Learning algorithm can often simplify code and perform better.</p>
+</li>
+<li><p>Complex problems for which <strong>there is no good solution at all using a traditional approach</strong>: the best Machine Learning techniques can find a solution.</p>
+</li>
+<li><strong>Fluctuating environments</strong>: a Machine Learning system can adapt to new data.</li>
+<li>Getting <strong>insights</strong> about <em>complex problems</em> and <em>large amounts of data</em>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image12.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Reinforcement-Learning">Reinforcement Learning<a class="anchor-link" href="#Reinforcement-Learning"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Reinforcement Learning is a very different <strong>beast</strong>. The learning system, called an <strong>agent</strong> in this context, can observe the <strong>environment</strong>, select and <strong>perform actions</strong>, and <strong>get rewards</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image13.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Batch-and-Online-Learning">Batch and Online Learning<a class="anchor-link" href="#Batch-and-Online-Learning"> </a></h1><p>Another criterion used to classify Machine Learning systems is whether or not the system can <strong>learn incrementally</strong> from a <strong>stream of incoming data</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Batch-learning">Batch learning<a class="anchor-link" href="#Batch-learning"> </a></h2><p>In batch learning, the system is <strong>incapable</strong> of learning incrementally: it must be <em>trained using all the available data</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Online-learning">Online learning<a class="anchor-link" href="#Online-learning"> </a></h2><p>In online learning, you <strong>train the system incrementally</strong> by feeding it data instances sequentially, either individually or by small groups called mini-batches. Each learning step is <strong>fast and cheap</strong>, so the system can learn about <em><b>new data on the fly</b></em> , as it arrives</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image14.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Instance-Based-Versus-Model-Based-Learning">Instance-Based Versus Model-Based Learning<a class="anchor-link" href="#Instance-Based-Versus-Model-Based-Learning"> </a></h1><p>One more way to categorize Machine Learning systems is by <strong>how they generalize</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Instance-based-learning">Instance-based learning<a class="anchor-link" href="#Instance-based-learning"> </a></h2><p>The system learns the examples by <strong>heart</strong>, then generalizes to new cases using a <em>similarity measure</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image15.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-based-learning">Model-based learning<a class="anchor-link" href="#Model-based-learning"> </a></h2><p>Another way to generalize from a <strong>set of examples</strong> is to <em>build a model of these examples</em> , then use that model to make <strong>predictions</strong>. This is called model-based learning</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image16.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Technologies">Technologies<a class="anchor-link" href="#Technologies"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/MachineLearningBlogs/images/copied_from_nb/IntroToML/image17.png" alt="image.png" /></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="udaypratapyati/MachineLearningBlogs"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/MachineLearningBlogs/machinelearning/ml/datascience/2021/08/06/Introduction-To-MachineLearning.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/MachineLearningBlogs/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/MachineLearningBlogs/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/MachineLearningBlogs/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/udaypratapyati" title="udaypratapyati"><svg class="svg-icon grey"><use xlink:href="/MachineLearningBlogs/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/UdayYati" title="UdayYati"><svg class="svg-icon grey"><use xlink:href="/MachineLearningBlogs/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
