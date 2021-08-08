@@ -69,8 +69,9 @@ exclude:
 include:
   - _pages
 
-header_pages:
-  - about.md
+# added by me, but not showing up
+# header_pages:  
+#  - about.md
 
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
